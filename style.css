@@ -1,0 +1,48 @@
+.Process {
+  display: flex;
+  flex-direction: row;
+
+  //justify-content: space-evenly;
+}
+
+body {
+  background-color: aquamarine;
+  padding: 10px;
+  margin: 10px;
+}
+
+#form_result {
+  display: none;
+}
+
+.chart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#chart0,
+#chart1,
+#chart2,
+#chart3 {
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+}
+
+.except {
+  display: flex;
+  justify-content: center;
+
+  margin: 10px;
+  padding: 10px;
+}
+
+#result_p1,
+#result_p2,
+#result_p3,
+#result_p4 {
+  position: absolute;
+  height: 495px;
+}

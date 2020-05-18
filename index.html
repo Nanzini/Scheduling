@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>OS Scheduling</title>
+  </head>
+  <body>
+    <form id="input">
+      <fieldset>
+        <!-- 폼 테두리-->
+        <div class="Process">
+          <div id="p1">
+            <h1>Process</h1>
+            <input
+              type="text"
+              name="arriveTime"
+              placeholder="arriveTime"
+            /><br />
+            <input type="text" name="burstTime" placeholder="burstTime" /><br />
+            <input type="text" name="Priority" placeholder="Priority" /><br />
+          </div>
+
+          <div id="p2">
+            <h1>Process</h1>
+            <input
+              type="text"
+              name="arriveTime"
+              placeholder="arriveTime"
+            /><br />
+            <input type="text" name="burstTime" placeholder="burstTime" /><br />
+            <input type="text" name="priority" placeholder="Priority" /><br />
+          </div>
+
+          <div id="p3">
+            <h1>Process</h1>
+            <input
+              type="text"
+              name="arriveTime"
+              placeholder="arriveTime"
+            /><br />
+            <input type="text" name="burstTime" placeholder="burstTime" /><br />
+            <input type="text" name="Priority" placeholder="Priority" /><br />
+          </div>
+        </div>
+        <input type="button" value="FCFS" id="btn_FCFS" />
+        <input type="button" value="SJF" id="btn_SJF" />
+        <input type="button" value="Priority" id="btn_Priority" />
+        <input type="button" value="RR" id="btn_RR" />
+        <span id="RRCount" value="0">0</span>
+        <input type="button" value="^" id="btn_up" />
+        <input type="button" value="v" id="btn_down" />
+      </fieldset>
+    </form>
+
+    <form id="form_result">
+      <fieldset>
+        <table>
+          <caption>
+            <h1 id="textResult">Result</h1>
+          </caption>
+          <div class="except">
+            <th>실행순서</th>
+            <th>도착시간</th>
+            <th>실행시간</th>
+            <th>기다림</th>
+
+            <tr>
+              <td>
+                1st
+              </td>
+              <td id="P1_arrive"></td>
+              <td id="P1_burst"></td>
+              <td id="P1_wait"></td>
+            </tr>
+
+            <tr>
+              <td>2nd</td>
+
+              <td id="P2_arrive"></td>
+              <td id="P2_burst"></td>
+              <td id="P2_wait"></td>
+            </tr>
+
+            <tr>
+              <td>3rd</td>
+              <td id="P3_arrive"></td>
+              <td id="P3_burst"></td>
+              <td id="P3_wait"></td>
+            </tr>
+          </div>
+        </table>
+      </fieldset>
+    </form>
+
+    <div class="chart">
+      <div id="chart0"></div>
+      <div id="chart1"></div>
+      <div id="chart2"></div>
+      <div id="chart3"></div>
+    </div>
+
+    <span id="result_p1"></span>
+    <span id="result_p2"></span>
+    <span id="result_p3"></span>
+    <span id="result_p4"></span>
+
+    <script src="./schedule.js"></script>
+
+    <script src="./fcfs.js"></script>
+    <script src="./sjf.js"></script>
+    <script src="./priority.js"></script>
+    <script src="./rr.js"></script>
+    <script src="./result.js"></script>
+
+    <!--js-->
+  </body>
+</html>
