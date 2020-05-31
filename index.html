@@ -44,13 +44,15 @@
             <input type="text" name="Priority" placeholder="Priority" /><br />
           </div>
         </div>
-        <input type="button" value="FCFS" id="btn_FCFS" />
-        <input type="button" value="SJF" id="btn_SJF" />
-        <input type="button" value="Priority" id="btn_Priority" />
-        <input type="button" value="RR" id="btn_RR" />
-        <span id="RRCount" value="0">0</span>
-        <input type="button" value="^" id="btn_up" />
-        <input type="button" value="v" id="btn_down" />
+        <div class="button">
+          <input type="button" value="FCFS" id="btn_FCFS" />
+          <input type="button" value="SJF" id="btn_SJF" />
+          <input type="button" value="Priority" id="btn_Priority" />
+          <input type="button" value="RR" id="btn_RR" />
+          <span id="RRCount" value="0">0</span>
+          <input type="button" value="^" id="btn_up" />
+          <input type="button" value="v" id="btn_down" />
+        </div>
       </fieldset>
     </form>
 
@@ -59,55 +61,25 @@
         <table>
           <caption>
             <h1 id="textResult">Result</h1>
+            <p id="burstTime"></p>
+            <p id="waitTime"></p>
+            <p id="avgWait"></p>
           </caption>
           <div class="except">
             <th>실행순서</th>
             <th>도착시간</th>
             <th>실행시간</th>
             <th>기다림</th>
-
-            <tr>
-              <td>
-                1st
-              </td>
-              <td id="P1_arrive"></td>
-              <td id="P1_burst"></td>
-              <td id="P1_wait"></td>
-            </tr>
-
-            <tr>
-              <td>2nd</td>
-
-              <td id="P2_arrive"></td>
-              <td id="P2_burst"></td>
-              <td id="P2_wait"></td>
-            </tr>
-
-            <tr>
-              <td>3rd</td>
-              <td id="P3_arrive"></td>
-              <td id="P3_burst"></td>
-              <td id="P3_wait"></td>
-            </tr>
           </div>
         </table>
       </fieldset>
     </form>
 
-    <div class="chart">
-      <div id="chart0"></div>
-      <div id="chart1"></div>
-      <div id="chart2"></div>
-      <div id="chart3"></div>
-    </div>
+    <div class="chart"></div>
 
-    <span id="result_p1"></span>
-    <span id="result_p2"></span>
-    <span id="result_p3"></span>
-    <span id="result_p4"></span>
+    <div class="result"></div>
 
     <script src="./schedule.js"></script>
-
     <script src="./fcfs.js"></script>
     <script src="./sjf.js"></script>
     <script src="./priority.js"></script>

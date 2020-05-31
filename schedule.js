@@ -24,18 +24,22 @@ const p3_burst = document.getElementById("P3_burst");
 const p1_wait = document.getElementById("P1_wait");
 const p2_wait = document.getElementById("P2_wait");
 const p3_wait = document.getElementById("P3_wait");
-const chart0 = document.getElementById("chart0");
-const chart1 = document.getElementById("chart1");
-const chart2 = document.getElementById("chart2");
-const chart3 = document.getElementById("chart3");
+
+const totalBurst = document.getElementById("burstTime");
+const totalWait = document.getElementById("waitTime");
+const avgWait = document.getElementById("avgWait");
+
 const form = document.getElementById("form_result");
 const div = document.createElement("div");
-const result_p1 = document.getElementById("result_p1");
-const result_p2 = document.getElementById("result_p2");
-const result_p3 = document.getElementById("result_p3");
-const result_p4 = document.getElementById("result_p4");
+
 form.style.display = "flex";
 
 let rrCount = document.getElementById("RRCount");
 const btn_up = document.getElementById("btn_up");
 const btn_down = document.getElementById("btn_down");
+
+const chart = document.querySelector(".chart");
+const time = document.querySelector(".result");
+
+const table_tr = document.querySelectorAll("tr");
+const div_result = document.querySelector("tbody");

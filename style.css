@@ -1,37 +1,29 @@
+#form_result {
+  display: flex;
+  flex-direction: row;
+}
 .Process {
   display: flex;
   flex-direction: row;
-
-  //justify-content: space-evenly;
+  justify-content: center;
 }
-
-body {
-  background-color: aquamarine;
-  padding: 10px;
-  margin: 10px;
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-
-#form_result {
-  display: none;
-}
-
 .chart {
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
 
-#chart0,
-#chart1,
-#chart2,
-#chart3 {
-  display: flex;
+.chart > div {
   height: 70px;
   justify-content: center;
   align-items: center;
 }
 
-.except {
+.except tr {
   display: flex;
   justify-content: center;
 
@@ -39,10 +31,11 @@ body {
   padding: 10px;
 }
 
-#result_p1,
-#result_p2,
-#result_p3,
-#result_p4 {
+.result > span {
   position: absolute;
   height: 495px;
+}
+
+tbody > div {
+  justify-content: center;
 }

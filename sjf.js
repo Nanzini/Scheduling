@@ -8,18 +8,21 @@ const run_SJF = () => {
       burst: Number(p1_value[1].value),
       priority: Number(p1_value[2].value),
       wait: 0,
+      fromWho: 0,
     },
     {
       arriveTime: Number(p2_value[0].value),
       burst: Number(p2_value[1].value),
       priority: Number(p2_value[2].value),
       wait: 0,
+      fromWho: 0,
     },
     {
       arriveTime: Number(p3_value[0].value),
       burst: Number(p3_value[1].value),
       priority: Number(p3_value[2].value),
       wait: 0,
+      fromWho: 0,
     },
   ];
 
@@ -64,11 +67,13 @@ const run_SJF = () => {
     }
   }
 
+  for (i = 0; i < schdQ.length; i++) schdQ[i].fromWho = i;
+
   //wait 계산
   currentTime = schdQ[0].burst + schdQ[0].arriveTime;
   schdQ = waitTime(currentTime, schdQ);
 
-  result(schdQ, currentTime, "SJF");
+  result1(schdQ, currentTime, "SJF");
 };
 
 SJF();
